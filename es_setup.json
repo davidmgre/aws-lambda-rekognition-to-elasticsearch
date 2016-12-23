@@ -1,0 +1,35 @@
+PUT /images
+{
+   "mappings": {
+      "image": {
+         "properties": {
+            "s3key": {
+               "type": "string"
+            },
+            "s3bucket": {
+               "type": "string"
+            },
+            "s3fullpath": {
+               "type": "string"
+            },
+            "imported-by": {
+               "type": "string"
+            },
+            "timestamp": {
+               "type": "date"
+            },
+            "tags": {
+               "type": "nested",
+               "properties": {
+                  "Name": {
+                     "type": "string"
+                  },
+                  "Confidence": {
+                     "type": "float"
+                  }
+               }
+            }
+         }
+      }
+   }
+}
