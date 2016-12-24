@@ -28,7 +28,7 @@ DEBUG = True  # Set verbose debugging information
 class TypeDeserializer(boto3.dynamodb.types.TypeDeserializer):
 	def _deserialize_n(self, value):
 		return float(value)
-
+	
 	def _deserialize_b(self, value):
 		return value  # Already in Base64
 
