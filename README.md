@@ -1,6 +1,6 @@
 # aws-rekognition-to-elasticsearch
 
-Analyze images with AWS Rekognition and write the results to Elasticsearch
+## Using [AWS Lambda](https://aws.amazon.com/lambda/), analyze images with AWS Rekognition and write the results to Elasticsearch
 
 Images written to a specific S3 bucket and path are scanned for recognizable objects using [AWS Rekognition](https://aws.amazon.com/rekognition/) and loaded to [Amazon Elasticsearch Service](https://aws.amazon.com/elasticsearch-service/) for searching. 
 
