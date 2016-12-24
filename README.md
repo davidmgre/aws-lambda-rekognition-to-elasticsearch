@@ -6,6 +6,9 @@ Images written to a specific S3 bucket and path are scanned for recognizable obj
 
 The Rekognition export for a sample [image](https://awsdmg.com/images/rekognition.jpg) is below.
 
+![alt text](https://awsdmg.com/images/rekognition.jpg "Rekognition Sample Image")
+
+
 <pre>
 {
     "Labels": [
