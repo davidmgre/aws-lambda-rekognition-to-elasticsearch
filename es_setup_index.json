@@ -18,7 +18,7 @@ PUT /images
             "timestamp": {
                "type": "date"
             },
-            "tags": {
+            "Labels": {
                "type": "nested",
                "properties": {
                   "Name": {
