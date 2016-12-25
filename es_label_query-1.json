@@ -5,7 +5,7 @@ POST /images/_search
          "must": [
             {
                "match": {
-                  "s3bucket": "rekognition"
+                  "s3bucket": "your-s3-bucket"
                }
             },
             {

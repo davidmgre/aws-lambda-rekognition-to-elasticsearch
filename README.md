@@ -84,3 +84,4 @@ In addition to the Rekognition output, we add additional metadata to Elasticsear
 * imported-by
 
 Please note, proper permissions / roles are required to execute this properly. 
+1. 1. 1. 
