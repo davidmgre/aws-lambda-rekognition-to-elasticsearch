@@ -8,7 +8,7 @@ The Rekognition export for a sample [image](https://awsdmg.com/images/rekognitio
 
 The CLI command used is:
 <pre>
-aws rekognition detect-labels --image '{"S3Object":{"Bucket":"mys3bucket","Name":"snowmobile.jpg"}}' --region us-east-1
+aws rekognition detect-labels --image '{"S3Object":{"Bucket":"mys3bucket","Name":"snowmobile.jpg"}}'
 </pre>
 
 ![alt text](https://awsdmg.com/images/snowmobile.jpg "Rekognition Sample Image")
