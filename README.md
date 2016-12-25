@@ -4,73 +4,62 @@
 
 Images written to a specific S3 bucket and path are scanned for recognizable objects using [AWS Rekognition](https://aws.amazon.com/rekognition/) and loaded to [Amazon Elasticsearch Service](https://aws.amazon.com/elasticsearch-service/) for searching. 
 
-The Rekognition export for a sample [image](https://awsdmg.com/images/rekognition.jpg) is below.
+The Rekognition export for a sample [image](https://awsdmg.com/images/rekognition.jpg) (AWS Snowmobile) is below.
 
-![alt text](https://awsdmg.com/images/rekognition.jpg "Rekognition Sample Image")
+The CLI command used is:
+<pre>
+aws rekognition detect-labels --image '{"S3Object":{"Bucket":"mys3bucket","Name":"snowmobile.jpg"}}' --region us-east-1
+</pre>
+
+![alt text](https://awsdmg.com/images/snowmobile.jpg "Rekognition Sample Image")
 
 
 <pre>
 {
     "Labels": [
         {
-            "Confidence": 99.294921875,
-            "Name": "Collage"
+            "Confidence": 96.58794403076172,
+            "Name": "Transportation"
         },
         {
-            "Confidence": 99.294921875,
-            "Name": "Poster"
+            "Confidence": 86.98311614990234,
+            "Name": "Trailer Truck"
         },
         {
-            "Confidence": 99.08350372314453,
-            "Name": "People"
+            "Confidence": 86.98311614990234,
+            "Name": "Truck"
         },
         {
-            "Confidence": 99.0835189819336,
-            "Name": "Person"
+            "Confidence": 86.98311614990234,
+            "Name": "Vehicle"
         },
         {
-            "Confidence": 99.05677795410156,
-            "Name": "Human"
+            "Confidence": 52.556495666503906,
+            "Name": "Engine"
         },
         {
-            "Confidence": 57.606666564941406,
-            "Name": "Face"
+            "Confidence": 52.556495666503906,
+            "Name": "Machine"
         },
         {
-            "Confidence": 57.606666564941406,
-            "Name": "Selfie"
+            "Confidence": 52.556495666503906,
+            "Name": "Motor"
         },
         {
-            "Confidence": 53.46586227416992,
-            "Name": "Hair"
+            "Confidence": 52.34297561645508,
+            "Name": "Tow Truck"
         },
         {
-            "Confidence": 53.46586227416992,
-            "Name": "Haircut"
+            "Confidence": 51.937294006347656,
+            "Name": "Caravan"
         },
         {
-            "Confidence": 53.46586227416992,
-            "Name": "Portrait"
+            "Confidence": 51.937294006347656,
+            "Name": "Van"
         },
         {
-            "Confidence": 51.43408966064453,
-            "Name": "Dimples"
-        },
-        {
-            "Confidence": 51.43408966064453,
-            "Name": "Smile"
-        },
-        {
-            "Confidence": 51.38983917236328,
-            "Name": "Team"
-        },
-        {
-            "Confidence": 51.38983917236328,
-            "Name": "Troop"
-        },
-        {
-            "Confidence": 51.37934112548828,
-            "Name": "Head"
+            "Confidence": 51.570945739746094,
+            "Name": "Car"
         }
     ]
 }
