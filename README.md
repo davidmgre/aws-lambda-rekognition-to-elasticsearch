@@ -67,10 +67,13 @@ aws rekognition detect-labels --image '{"S3Object":{"Bucket":"mys3bucket","Name"
 
 In addition to the Rekognition output, we add additional metadata to Elasticsearch which includes:
 
-* timestamp
+* timestamp 
+	* <pre>2016-12-25T22:10:41.983000</pre>
 * bucket name
+	* <pre>mys3bucket</pre>
 * key name
+	* <pre>snowmobile.jpg</pre>
 * imported-by
+	* <pre>lambda-to-es</pre>
 
 Please note, proper permissions / roles are required to execute this properly. 
-1. 1. 1. 
