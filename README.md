@@ -4,7 +4,7 @@
 
 Images written to a specific S3 bucket and path are scanned for recognizable objects using [AWS Rekognition](https://aws.amazon.com/rekognition/) and loaded to [Amazon Elasticsearch Service](https://aws.amazon.com/elasticsearch-service/) for searching. 
 
-The Rekognition export for a sample [image](https://awsdmg.com/images/rekognition.jpg) (AWS Snowmobile) is below.
+The Rekognition export for a sample image ([AWS Snowmobile](https://aws.amazon.com/snowmobile/)) is below.
 
 The CLI command used is:
 <pre>
