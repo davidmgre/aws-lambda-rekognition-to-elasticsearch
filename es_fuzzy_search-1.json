@@ -1,0 +1,38 @@
+POST /images/_search
+{
+   "query": {
+      "bool": {
+         "must": [
+            {
+               "match": {
+                  "s3bucket": "mys3bucket"
+               }
+            },
+            {
+               "nested": {
+                  "path": "Labels",
+                  "score_mode": "sum",
+                  "query": {
+                     "function_score": {
+                        "query": {
+                           "fuzzy": {
+                              "Labels.Name": {
+                                 "value": "Poster",
+                                 "boost": 1,
+                                 "fuzziness": 2,
+                                 "prefix_length": 0,
+                                 "max_expansions": 100
+                              }
+                           }
+                        },
+                        "field_value_factor": {
+                           "field": "Labels.Confidence"
+                        }
+                     }
+                  }
+               }
+            }
+         ]
+      }
+   }
+}
