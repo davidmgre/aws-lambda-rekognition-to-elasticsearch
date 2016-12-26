@@ -15,7 +15,8 @@ import boto3.dynamodb.types
 rekog = boto3.client('rekognition')
 
 # The following parameters are required to configure the ES cluster
-ES_ENDPOINT = 'search-awsdmges-twk2wgfyaq3ezva7bddaaolc7i.us-east-1.es.amazonaws.com'
+# Set value to Elasticsearch Endpoint - i.e. serach-awsdmg-abcdefg1234567890.us-east-1.es.amazonaws.com
+ES_ENDPOINT = 'serach-awsdmg-abcdefg1234567890.us-east-1.es.amazonaws.com'
 
 # The following parameters can be optionally customized
 DOC_TABLE_FORMAT = 'images'
