@@ -4,6 +4,21 @@
 
 Images written to a specific S3 bucket and path are scanned for recognizable objects using [AWS Rekognition](https://aws.amazon.com/rekognition/) and loaded to [Amazon Elasticsearch Service](https://aws.amazon.com/elasticsearch-service/) for searching. 
 
+## Sample Data Set
+We are using images from the [Multimedia Commons data set](https://pages.awscloud.com/public-data-sets-multimedia-commons.html), which is a collection of audio and visual features computed for the nearly 100 million Creative Commons-licensed Flickr images and videos in the YFCC100M dataset from Yahoo! Labs, along with ground-truth annotations for selected subsets.
+
+Because the Multimedia Commons data set already resides on S3, the Bash command below will copy 10 image directories with a total of ~16,000 images to our S3 bucket:
+
+<pre>
+for i in {010..011}; do
+	`aws s3 sync s3://multimedia-commons/data/images/$i/ s3://mys3bucket/`;
+done
+</pre>
+Alternately, you could run the command below will copy individual directories:
+<pre>
+aws s3 sync s3://multimedia-commons/data/images/010/ s3://rekog/es/multimedia-commons/010/
+</pre>
+
 The Rekognition export for a sample image ([AWS Snowmobile](https://aws.amazon.com/snowmobile/)) is below.
 
 The CLI command used is:
