@@ -11,7 +11,7 @@ Because the Multimedia Commons data set already resides on S3, the Bash command 
 
 <pre>
 for i in {010..011}; do
-	`aws s3 sync s3://multimedia-commons/data/images/$i/ s3://mys3bucket/`;
+	`aws s3 sync s3://multimedia-commons/data/images/$i/ s3://mys3bucket/$i/`;
 done
 </pre>
 Alternately, you could run the command below will copy individual directories:
